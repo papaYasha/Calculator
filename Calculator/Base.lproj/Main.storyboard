@@ -16,177 +16,244 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kOK-aO-ftz">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kOK-aO-ftz">
                                 <rect key="frame" x="20" y="0.0" width="374" height="822"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYN-GL-KlD">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="411"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="125,5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVu-5F-5Yh">
+                                                <rect key="frame" x="20" y="319" width="334" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="60"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="l90-Fa-PW6"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZVu-5F-5Yh" secondAttribute="trailing" constant="20" id="SfA-2B-f0X"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZVu-5F-5Yh" secondAttribute="bottom" constant="20" id="TFf-wI-GCY"/>
+                                            <constraint firstItem="ZVu-5F-5Yh" firstAttribute="leading" secondItem="fYN-GL-KlD" secondAttribute="leading" constant="20" id="jW8-vT-gcQ"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7H1-bZ-Y9F">
-                                        <rect key="frame" x="0.0" y="300" width="374" height="522"/>
+                                        <rect key="frame" x="0.0" y="411" width="374" height="411"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5AN-eb-BfC">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="96.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="74"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULb-Yy-cKa" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="96.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="74"/>
                                                         <color key="backgroundColor" red="0.29411764709999999" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="AC"/>
+                                                        <connections>
+                                                            <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iLu-1C-xn3"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qM6-3X-MrJ" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="96" y="0.0" width="86" height="96.5"/>
+                                                        <rect key="frame" x="96" y="0.0" width="86" height="74"/>
                                                         <color key="backgroundColor" red="0.29411764705882354" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="+/-"/>
+                                                        <connections>
+                                                            <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zsG-A9-a0H"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Skc-uM-yKD" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="192" y="0.0" width="86" height="96.5"/>
+                                                        <rect key="frame" x="192" y="0.0" width="86" height="74"/>
                                                         <color key="backgroundColor" red="0.29411764709999999" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="%"/>
+                                                        <connections>
+                                                            <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZpV-ZC-gch"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69N-Ja-eaN" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="288" y="0.0" width="86" height="96.5"/>
+                                                        <rect key="frame" x="288" y="0.0" width="86" height="74"/>
                                                         <color key="backgroundColor" red="0.96470588235294119" green="0.61960784313725492" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="45"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="÷"/>
+                                                        <connections>
+                                                            <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VNR-HR-7F3"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yC0-Jr-1R4">
-                                                <rect key="frame" x="0.0" y="106.5" width="374" height="96.5"/>
+                                                <rect key="frame" x="0.0" y="84" width="374" height="74.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pW2-bQ-tva" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="96.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="74.5"/>
                                                         <color key="backgroundColor" red="0.42352941179999998" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                                                         <color key="tintColor" red="0.8488730873" green="1" blue="0.95684803740000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="7"/>
+                                                        <connections>
+                                                            <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdR-RS-WR5"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZ5-k9-2rH" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="96" y="0.0" width="86" height="96.5"/>
+                                                        <rect key="frame" x="96" y="0.0" width="86" height="74.5"/>
                                                         <color key="backgroundColor" red="0.42352941179999998" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="8"/>
+                                                        <connections>
+                                                            <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fN9-Iu-9wC"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDh-8L-0Hq" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="192" y="0.0" width="86" height="96.5"/>
+                                                        <rect key="frame" x="192" y="0.0" width="86" height="74.5"/>
                                                         <color key="backgroundColor" red="0.42352941179999998" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="9"/>
+                                                        <connections>
+                                                            <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zzw-eZ-0V4"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXw-KB-Dv9" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="288" y="0.0" width="86" height="96.5"/>
+                                                        <rect key="frame" x="288" y="0.0" width="86" height="74.5"/>
                                                         <color key="backgroundColor" red="0.96470588239999999" green="0.61960784310000006" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="45"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="×"/>
+                                                        <connections>
+                                                            <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="waR-eE-vfL"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f46-FR-na8">
-                                                <rect key="frame" x="0.0" y="213" width="374" height="96"/>
+                                                <rect key="frame" x="0.0" y="168.5" width="374" height="74"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Y8-9b-TBC" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="96"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="74"/>
                                                         <color key="backgroundColor" red="0.42352941179999998" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="41"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="6"/>
+                                                        <connections>
+                                                            <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKP-RJ-R70"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQ9-L1-pt8" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="96" y="0.0" width="86" height="96"/>
+                                                        <rect key="frame" x="96" y="0.0" width="86" height="74"/>
                                                         <color key="backgroundColor" red="0.42352941179999998" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="41"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="5"/>
+                                                        <connections>
+                                                            <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tqa-mC-hp4"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiK-2l-qkZ" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="192" y="0.0" width="86" height="96"/>
+                                                        <rect key="frame" x="192" y="0.0" width="86" height="74"/>
                                                         <color key="backgroundColor" red="0.42352941179999998" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="41"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="4"/>
+                                                        <connections>
+                                                            <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rn9-6c-dcQ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbH-6D-lvW" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="288" y="0.0" width="86" height="96"/>
+                                                        <rect key="frame" x="288" y="0.0" width="86" height="74"/>
                                                         <color key="backgroundColor" red="0.96470588239999999" green="0.61960784310000006" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="45"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8qy-oY-u1P"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sKa-tO-1Xh">
-                                                <rect key="frame" x="0.0" y="319" width="374" height="96.5"/>
+                                                <rect key="frame" x="0.0" y="252.5" width="374" height="74.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIH-Yb-113" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="96.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="74.5"/>
                                                         <color key="backgroundColor" red="0.42352941179999998" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="1"/>
+                                                        <connections>
+                                                            <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FPl-zG-dCB"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hT6-nK-GhA" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="96" y="0.0" width="86" height="96.5"/>
+                                                        <rect key="frame" x="96" y="0.0" width="86" height="74.5"/>
                                                         <color key="backgroundColor" red="0.42352941179999998" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="2"/>
+                                                        <connections>
+                                                            <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xu2-sB-SYJ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fME-u6-sNe" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="192" y="0.0" width="86" height="96.5"/>
+                                                        <rect key="frame" x="192" y="0.0" width="86" height="74.5"/>
                                                         <color key="backgroundColor" red="0.42352941179999998" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="3"/>
+                                                        <connections>
+                                                            <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a7d-nm-5se"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qff-jW-gwk" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="288" y="0.0" width="86" height="96.5"/>
+                                                        <rect key="frame" x="288" y="0.0" width="86" height="74.5"/>
                                                         <color key="backgroundColor" red="0.96470588239999999" green="0.61960784310000006" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="45"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="+"/>
+                                                        <connections>
+                                                            <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ir5-hG-LRd"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yXX-DJ-MFn">
-                                                <rect key="frame" x="0.0" y="425.5" width="374" height="96.5"/>
+                                                <rect key="frame" x="0.0" y="337" width="374" height="74"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FH9-yj-osC" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="96.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="74"/>
                                                         <color key="backgroundColor" red="0.42352941179999998" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="0"/>
+                                                        <connections>
+                                                            <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dCT-yi-4dO"/>
+                                                        </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ekn-ap-nCs">
-                                                        <rect key="frame" x="192" y="0.0" width="182" height="96.5"/>
+                                                        <rect key="frame" x="192" y="0.0" width="182" height="74"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ML5-hT-AIL" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="86" height="96.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="86" height="74"/>
                                                                 <color key="backgroundColor" red="0.42352941176470588" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="45"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <state key="normal" title="."/>
+                                                                <state key="normal" title=","/>
+                                                                <connections>
+                                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WRS-Yq-OPw"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mct-fF-kAF" customClass="Button" customModule="Calculator" customModuleProvider="target">
-                                                                <rect key="frame" x="96" y="0.0" width="86" height="96.5"/>
+                                                                <rect key="frame" x="96" y="0.0" width="86" height="74"/>
                                                                 <color key="backgroundColor" red="0.96470588239999999" green="0.61960784310000006" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="45"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="="/>
+                                                                <connections>
+                                                                    <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gLy-nB-Bbh"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -207,7 +274,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mainStackView" destination="kOK-aO-ftz" id="LUK-fg-DOK"/>
+                        <outlet property="displayLabel" destination="ZVu-5F-5Yh" id="AgC-pr-jMw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
