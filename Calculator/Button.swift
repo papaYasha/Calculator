@@ -10,6 +10,6 @@ import UIKit
 class Button: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.cornerRadius = self.frame.height / 2
+        self.layer.cornerRadius = self.bounds.height / 2
     }
 }
